@@ -73,7 +73,7 @@
     width: 350px;
     border-radius: 5px;
     border-color: transparent;
-    /* color: black; */
+    color: white;
     background-color: black;
 }
 
@@ -98,7 +98,8 @@
     justify-content: center;
 }
 
-.button {
+.buttons {
+    position: relative;
     /* padding: 20px; */
     height: 50px;
     width: 500px;
@@ -107,5 +108,44 @@
     font-family: "Poetsen One", sans-serif;
     font-weight: 400;
     font-style: normal;
-
+    overflow: hidden;
 }
+
+.buttons::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: red; */
+    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    transition-duration: 0.8s;
+}
+
+.buttons::after {
+    content: "";
+    height: 50%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: red; */
+    transform: translateY(200%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition-duration: 0.8s;
+}
+
+.buttons:hover::before {
+    transform: translateY(0%);
+}
+
+.buttons:hover::after {
+    transform: translateY(100%);
+}
+
+/* .buttons:hover {
+
+    background-color: orange;
+} */
