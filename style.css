@@ -33,7 +33,8 @@
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
-
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     /* flex-wrap: wrap; */
     /* column-gap: 10px; */
